@@ -6,6 +6,7 @@ body{
   margin-top: 0;
   padding: 0;
   border: 0;
+  -webkit-font-smoothing: antialiased !important;
 
 
 
@@ -22,7 +23,9 @@ body{
   margin-bottom: 0;
 }
 
-
+.navbar .nav a:hover, .navbar .nav a:focus {
+  background: none;
+}
 
 .navbar .nav a {
   color: rgba(0, 0, 0, 1);
@@ -31,13 +34,11 @@ body{
 
 }
 .nav li {
-  display: inline;
+  display: block;
   padding-right: 50px;
 }
 
-.navbar .nav a:hover, .navbar .nav a:focus {
-  background: none;
-}
+
 .navbar .active a {
   border-top: 2px solid #000000;
 }
@@ -60,6 +61,21 @@ body{
   .navbar-collapse {
     background-color: rgba( 0, 0, 0, .8);
   }
+}
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+.slide {
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-bottom: 65px;
+  padding-top: 50px;
+  text-align: center;
 }
 h2{
   margin-right: 0;
@@ -86,10 +102,50 @@ h2{
   background-size: cover;
   color: white;
   text-align: center;
+  border:0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
 }
 
+#fas fa-sign-out-alt{
+
+  margin-left: 10%;
 
 
+}
+@-webkit-keyframes animate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.navigation-slide {
+  cursor: pointer;
+  text-align: center;
+}
+
+.navigation-slide-a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
 
 #logo{
   width: 35%;
